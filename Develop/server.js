@@ -13,13 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname));
 
-app.get('/',(req,res)=>{
-    res.send('hello world')
-})
+//app
+routes(app)
 
-//(app);
 
 // Setup listener
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log("App listening on PORT: " + PORT);
 });  
